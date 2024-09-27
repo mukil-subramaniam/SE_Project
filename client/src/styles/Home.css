@@ -1,0 +1,117 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Light gradient background */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+    transition: all 0.3s ease;
+}
+
+.home-container:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.animated-header {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease forwards, colorChange 3s infinite alternate; /* Added color change animation */
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ff5733; /* Color 1 */
+    }
+    50% {
+        color: #28a745; /* Color 2 */
+    }
+    100% {
+        color: #3498db; /* Color 3 */
+    }
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555; /* Darker text for better readability */
+}
+
+.start-btn {
+    background-color: #28a745; /* Bootstrap green */
+    color: white;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.start-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Button lift on hover */
+}
+
+.image-wrapper {
+    margin: 30px 0;
+    animation: bounceIn 1s ease forwards; /* Added bounce-in animation */
+}
+
+.home-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation: slideIn 1s ease forwards;
+}
+
+.additional-info {
+    margin-top: 40px;
+    text-align: left;
+    max-width: 600px; /* Limit width for readability */
+}
+
+.additional-info h2 {
+    margin-top: 20px;
+    color: #333; /* Darker header */
+}
+
+.additional-info ul {
+    list-style-type: disc;
+    margin-left: 20px; /* Indentation for list */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
